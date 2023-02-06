@@ -1,0 +1,4 @@
+@startuml Hello World
+
+A -> C: Hello
+@enduml
