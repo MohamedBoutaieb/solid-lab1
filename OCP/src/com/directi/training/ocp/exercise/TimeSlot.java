@@ -20,14 +20,17 @@ public class TimeSlot extends Resource {
 
     @Override
     public void markSlotFree(int resourceId) {
-        // TODO Auto-generated method stub
 
     }
 
     @Override
     public void markSlotBusy(int resourceId) {
-        // TODO Auto-generated method stub
 
+    }
+
+    @Override
+    public int findFreeSlot() {
+        return 0;
     }
 
 }

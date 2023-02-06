@@ -1,6 +1,0 @@
-@startuml
-class ExampleClass {
-  +String attribute1
-  -void method1()
-}
-@enduml

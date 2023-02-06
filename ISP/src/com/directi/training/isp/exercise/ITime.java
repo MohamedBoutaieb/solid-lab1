@@ -1,5 +1,5 @@
 package com.directi.training.isp.exercise;
 
-public interface ITimed {
+public interface ITime {
     void timeOutCallback();
 }

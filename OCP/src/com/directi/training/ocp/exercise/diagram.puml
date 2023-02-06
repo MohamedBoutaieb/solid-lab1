@@ -1,3 +1,22 @@
 @startuml
-Class09 -- Class10
+
+
+abstract Resource
+Resource <.. ResourceAllocator
+ResourceAllocator : +int allocate(Resource res)
+ResourceAllocator : +void free(Resource res)
+
+Resource :    +int allocate()
+
+Resource :    +void free()
+
+Resource :    +void markSlotFree(int resourceId)
+
+Resource :   +void markSlotBusy(int resourceId)
+
+Resource :    +int findFreeSlot()
+class SpaceSlot
+class TimeSlot
+SpaceSlot --|> Resource
+TimeSlot --|> Resource
 @enduml

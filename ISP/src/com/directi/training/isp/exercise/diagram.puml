@@ -1,0 +1,22 @@
+@startuml 
+interface Door {
+    void lock()
+
+    void unlock()
+
+    void open()
+
+    void close()
+}
+interface ISensor {
+  void timeOutCallback()
+}
+
+interface ITime {
+  void timeOutCallback()
+}
+SensingDoor --|> Door
+SensingDoor --|> ISensor
+TimedDoor --|> ITime
+TimedDoor  --|> Door
+@enduml

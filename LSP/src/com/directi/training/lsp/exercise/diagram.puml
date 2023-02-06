@@ -1,0 +1,15 @@
+@startuml
+interface DuckI
+DuckI :   +void quack();
+DuckI  :  +void swim();
+interface ElectronicDuckI
+Duck ..|>  DuckI
+ElectronicDuckI --|>DuckI
+ElectronicDuck ..|> ElectronicDuckI
+DuckI<--Pool : "swims">
+Pool : void run()
+Pool : void swim(..DuckI)
+Pool : void quack(..DuckI)
+Pool : DuckI ElectronicDuck
+Pool : DuckI Duck
+@enduml
