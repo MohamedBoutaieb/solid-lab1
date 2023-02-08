@@ -1,0 +1,17 @@
+@startuml LSP
+class Pool
+class Duck
+Duck : +quack()
+Duck : +swim()
+Pool : donaldDuck
+Pool : electricDuck
+Pool -- Duck : "swims" <
+Pool : +run()
+Pool : -quack(Duck)
+Pool : - swim(Duck)
+class ElectronicDuck
+ElectronicDuck --|> Duck
+ElectronicDuck : - _on
+ElectronicDuck : +turnOn()
+ElectronicDuck : +turnOff()
+@enduml

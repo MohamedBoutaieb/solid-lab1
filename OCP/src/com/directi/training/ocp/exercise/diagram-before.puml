@@ -1,0 +1,16 @@
+@startuml OCP
+class ResourceAllocator
+enum ResourceType
+ResourceType : TIME_SLOT
+ResourceType : SPACE_SLOT
+ResourceAllocator -- ResourceType
+ResourceAllocator : -INVALID_RESOURCE_ID
+ResourceAllocator : +allocate(ResourceType)
+ResourceAllocator : +free(ResourceType)
+ResourceAllocator : -markSpaceSlotFree(int)
+ResourceAllocator : -markTimeSlotFree(int)
+ResourceAllocator : -markSpaceSlotBusy(int)
+ResourceAllocator : -findFreeSpaceSlot(int)
+ResourceAllocator : -markTimeSlotBusy(int)
+ResourceAllocator : -findFreeTimeSlot(int)
+@enduml

@@ -1,0 +1,12 @@
+@startuml DIP
+class EncodingModuleClient
+class EncodingModule
+class MyDatabase
+EncodingModuleClient o-- EncodingModule
+EncodingModule -- MyDatabase
+EncodingModule : +encodeWithFiles()
+EncodingModule : +encodeBasedOnNetworkAndDatabase()
+MyDatabase : write()
+MyDatabase : _data
+MyDatabase : _count
+@enduml
