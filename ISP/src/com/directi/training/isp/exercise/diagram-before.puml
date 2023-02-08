@@ -1,0 +1,25 @@
+@startuml
+interface Door
+Door : +lock()
+Door  : +unlock()
+Door : +open()
+Door : +close()
+Door : +timeOutCallback()
+Door : +proximityCallBack()
+class SensingDoor
+SensingDoor --|> Door
+SensingDoor : _locked
+SensingDoor : _opened
+
+class Sensor
+Sensor : +register(Door)
+Sensor : +isPersonClose()
+class TimedDoor
+TimedDoor --|> Door
+TimedDoor : _locked
+TimedDoor : _opened
+class Timer
+Timer : +register(Door)
+Timer ..> Door
+Sensor..> Door
+@enduml
