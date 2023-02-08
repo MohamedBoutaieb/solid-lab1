@@ -1,8 +1,6 @@
 # SOLID LAB 1
 
-
 <h2> I Introduction </h2>
-
 
 <h2>II Les règles d'une bonne architecture logicielle </h2>
 
@@ -15,43 +13,61 @@ Dans notre exemple du RessourceAllocator, cette classe contient toutes les méth
 
 De plus, on est en train de proposer des méthodes différentes pour la même fonctionnalité ( markTimeSlotFree et markSpaceSlotFree par exemple)
 
-![Class Diagram](./assets/diagrams-before/OCP.png) 
+<div class="puml">
+
+![Class Diagram](./assets/diagrams-before/OCP.png)
+
+</div>
 
 _Solution_
 
 Construire une interface Resource contenant les methodes génériques pour chaque ressource et implémenter ces méthodes dans chaque type de Slot (TimeSlot/SpaceSlot) et utiliser seulement l'interface 'Resource' pour le traitement de Slots différents dans RessourceAllocator,on n'a plus besoin de l'énumération ResourceType
 
-![Class Diagram](./assets/diagrams-after/OCP.png) 
+<div class="puml">
 
+![Class Diagram](./assets/diagrams-after/OCP.png)
+
+</div>
 <h3> LSP : The LisKov Substitution Principle </h3>
 
 _Probleme_
 
 rédaction
 
-![Class Diagram](./assets/diagrams-before/LSP.png) 
+<div class="puml">
 
+![Class Diagram](./assets/diagrams-before/LSP.png)
+
+</div>
 
 _Solution_
 
 rédaction
 
-![Class Diagram](./assets/diagrams-after/LSP.png) 
-
+<div class="puml">
+![Class Diagram](./assets/diagrams-after/LSP.png)
+</div>
 <h3> ISP : Interface Segregation Principle </h3>
 
 _Probleme_
 
 rédaction
 
-![Class Diagram](./assets/diagrams-before/ISP.png) 
+<div class="puml">
 
+![Class Diagram](./assets/diagrams-before/ISP.png)
+
+</div>
 
 _Solution_
 
 rédaction
 
-![Class Diagram](./assets/diagrams-after/ISP.png) 
+<div class="puml">
+
+![Class Diagram](./assets/diagrams-after/ISP.png)
+
+</div>
 
 <h3> DIP: Dependency Inversion Principle </h3>
 
@@ -59,15 +75,19 @@ _Probleme_
 
 rédaction
 
-![Class Diagram](./assets/diagrams-before/DIP.png) 
+<div class="puml">
 
+![Class Diagram](./assets/diagrams-before/DIP.png)
+
+</div>
 
 _Solution_
 
 rédaction
 
-![Class Diagram](./asse ts/diagrams-after/DIP.png) 
-
+<div class="puml">
+![Class Diagram](./asse ts/diagrams-after/DIP.png)
+</div>
 
 <h3> SRP: Single Responsability Principle  </h3>
 
@@ -75,12 +95,27 @@ _Probleme_
 
 rédaction
 
-![Class Diagram](./assets/diagrams-before/SRP.png) 
+<div class="puml">
 
+![Class Diagram](./assets/diagrams-before/SRP.png)
+
+</div>
 
 _Solution_
 
 rédaction
 
-![Class Diagram](./assets/diagrams-after/SRP.png) 
+<div class="puml">
 
+![Class Diagram](./assets/diagrams-after/SRP.png)
+
+</div>
+<style>
+.puml{
+    display:flex;
+    justify-content:center;
+    overflow:hidden;
+    
+}
+
+ </style>
