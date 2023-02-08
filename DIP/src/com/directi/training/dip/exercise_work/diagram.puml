@@ -1,0 +1,16 @@
+@startuml
+
+interface Encoder
+Encoder : +encode(String) : String
+FileEncoder ..|> Encoder
+FileEncoder : -base
+FileEncoder : -source
+FileEncoder : -destination
+DataBaseEncoderAndNetwork ..|> Encoder
+DataBaseEncoderAndNetwork : -protocole
+DataBaseEncoderAndNetwork : -name
+DataBaseEncoderAndNetwork  ..> MyDataBase
+MyDataBase : -data 
+MyDataBase : -count   
+MyDataBase : +write(String):void
+@enduml
