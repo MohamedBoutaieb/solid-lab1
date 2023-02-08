@@ -3,8 +3,11 @@ interface DuckI
 DuckI :   +void quack();
 DuckI  :  +void swim();
 interface ElectronicDuckI
+ElectronicDuckI : +void turnOn();
+ElectronicDuckI : +void turnOff();
 Duck ..|>  DuckI
 ElectronicDuckI --|>DuckI
+ElectronicDuck : -_on
 ElectronicDuck ..|> ElectronicDuckI
 DuckI<--Pool : "swims">
 Pool : void run()

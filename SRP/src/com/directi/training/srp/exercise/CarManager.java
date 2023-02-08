@@ -1,11 +1,12 @@
 package com.directi.training.srp.exercise;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class CarManager {
     private CarsDB carDb = new CarsDB();
-    private CarAssessment carAssessment = new CarAssessment(carDb.getAllCars());
+    private List<Car> carList = carDb.getAllCars();
+    private CarAssessment carAssessment = new CarAssessment(carList);
+    private CarNamesList carNamesList = new CarNamesList(carList);
 
     public Car getFromDb(final String carId) {
 
@@ -13,7 +14,7 @@ public class CarManager {
     }
 
     public String getCarsNames() {
-        return carAssessment.getCarsNames();
+        return carNamesList.getCarsNames();
     }
 
     public Car getBestCar() {

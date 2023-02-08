@@ -1,0 +1,34 @@
+@startuml 
+class Car {
+    -_id
+    -_model
+    -_brand
+    +get_id()
+    +get_model()
+    +get_brand()
+}
+class CarDb {
+    -_carsDb
+    +getAllcars()
+}
+class CarManager{
+    -_carDb
+    -carAssessment
+    -carList
+    -carNamesList
+}
+class CarNamesList{
+    -cars
+    +CarNamesList(List<Car>)
+    +getCarsNames()
+}
+class CarAssessment{
+    -cars
+    +CarAssessment(List<Car>)
+    +getCarAssessment()
+}
+CarManager o-- CarDb
+CarManager o-- CarAssessment
+CarManager o-- CarNamesList
+CarDb --> Car : "contains">
+@enduml
