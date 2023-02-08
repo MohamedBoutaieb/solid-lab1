@@ -1,6 +1,4 @@
-@startuml
-
-
+@startuml 
 abstract Resource
 Resource <.. ResourceAllocator
 ResourceAllocator : +int allocate(Resource res)
