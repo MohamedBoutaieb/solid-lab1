@@ -1,23 +1,13 @@
-# SOLID
-@startuml
+<h1> SOLID LAB 1 </h1>
 
 
-abstract Resource
-Resource <.. ResourceAllocator
-ResourceAllocator : public int allocate(Resource res)
-ResourceAllocator : public void free(Resource res)
+<h2> I Introduction </h2>
 
-Resource :    public abstract int allocate();
 
-Resource :    public abstract void free();
+<h2>II Les règles d'une bonne architecture logicielle </h2>
 
-Resource :    public abstract void markSlotFree(int resourceId);
+<h3> DIP </h3>
 
-Resource :   public abstract void markSlotBusy(int resourceId);
+<h3> OCP : The Open/Closed Principle </h3>
 
-Resource :    public abstract int findFreeSlot();
-class SpaceSlot
-class TimeSlot
-SpaceSlot --|> Resource
-TimeSlot --|> Resource
-@enduml
+Dans notre exemple du RessourceAllocator, cette classe contient toutes les méthodes pour libérer, réserver, rechercher des slots libres mais le traitement est différent pour cer
