@@ -7,7 +7,7 @@ Door : +close()
 Door : +timeOutCallback()
 Door : +proximityCallBack()
 class SensingDoor
-SensingDoor --|> Door
+SensingDoor ..|> Door
 SensingDoor : _locked
 SensingDoor : _opened
 
@@ -15,7 +15,7 @@ class Sensor
 Sensor : +register(Door)
 Sensor : +isPersonClose()
 class TimedDoor
-TimedDoor --|> Door
+TimedDoor ..|> Door
 TimedDoor : _locked
 TimedDoor : _opened
 class Timer

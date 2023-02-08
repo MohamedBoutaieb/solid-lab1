@@ -1,0 +1,15 @@
+@startuml SRP
+class CarManager
+class Car
+Car : - _id
+Car : _model
+Car : _brand
+Car : +getId()
+Car : +getModel()
+Car : +getBrand()
+CarManager : _carsDb
+CarManager : getFromDb(String) : Car
+CarManager : getCarsNames() : String
+CarManager :  getBestCar() : Car
+CarManager ..> Car :  "manage: ">
+@enduml
