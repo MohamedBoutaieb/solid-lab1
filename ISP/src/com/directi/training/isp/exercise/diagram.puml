@@ -9,7 +9,7 @@ interface Door {
     void close()
 }
 interface ISensor {
-  void timeOutCallback()
+  void proximityCallBack()
 }
 
 interface ITime {
