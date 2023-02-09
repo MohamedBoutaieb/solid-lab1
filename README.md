@@ -69,7 +69,7 @@ Maintenant, TimedDoor implémente Door et Itime et Isensor implémente Isensor e
 
 <div class="puml">
 
-![Class Diagram](./ISP/src/com/directi/training/isp/exercise/diagram.puml)
+![Class Diagram](./assets/diagrams-after.png)
 
 </div>
 
