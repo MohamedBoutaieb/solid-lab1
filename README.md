@@ -32,7 +32,7 @@ Construire une interface Resource contenant les methodes génériques pour chaqu
 
 _Probleme_
 
-rédaction
+
 
 <div class="puml">
 
@@ -42,16 +42,18 @@ rédaction
 
 _Solution_
 
-rédaction
+
 
 <div class="puml">
+
 ![Class Diagram](./assets/diagrams-after/LSP.png)
+
 </div>
 <h3> ISP : Interface Segregation Principle </h3>
 
 _Probleme_
 
-rédaction
+
 
 <div class="puml">
 
